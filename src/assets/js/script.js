@@ -32,12 +32,12 @@ $(function() {
     $("#nav-icon3").toggleClass("open");
   });
 
-  // $('.homeSlides').bxSlider({
-  //   adaptiveHeight: true,
-  //   mode: 'fade',
-  //   captions: true,
-  //   pager: true,
-  //   pagerType: 'short',
-  // });
+  $('.homeSlides').bxSlider({
+    adaptiveHeight: true,
+    mode: 'fade',
+    captions: true,
+    pager: true,
+    pagerType: 'long',
+  });
 
 });

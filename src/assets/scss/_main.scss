@@ -3,7 +3,6 @@
      Description: main.scss
      ===========================
 */
-
 .center-inner {
   width: 100%;
   height: auto;
@@ -40,6 +39,9 @@
   border-radius: 0 !important;
 }
 
+.homeSlides{
+  vertical-align: top;
+}
 .bx-controls,
 .bx-wrapper .bx-viewport {
   font-size: 16px;
@@ -58,20 +60,69 @@
   color: #333333;
 }
 
-.mainCopy {
-  p {
-    text-align: left;
-    font-family: $fontStack;
-    font-size: 24px;
-    font-size: 1.5em;
-    font-weight: 500;
-    line-height: 1.42;
-    letter-spacing: 0.5px;
-    color: #333333;
-    max-width: 37.5em;
+h1{
+  margin: 1em auto 10px;
+}
+h4{
+  margin: 10px auto 2em;
+}
+
+h2 {
+  font-family: $fontStack;
+  font-size: 32px;
+  font-size: 1.8em;
+  font-weight: bold;
+  letter-spacing: 2.6px;
+  text-align: left;
+  color: #333333;
+  line-height: 1.4;
+
+}
+
+p {
+  font-family: $fontStack;
+  font-size: 16px;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1.47;
+  letter-spacing: 0.3px;
+  color: #333333;
+  margin: 15px auto;
+}
+
+.features {
+  vertical-align: top;
+  .featureItem {
+    margin: 1.5em auto;
+
+    .fa,
+    .featureLists,
+    img.homeIcons {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .fa,
+    img.homeIcons {
+      width: 15%;
+    }
+
+    .featureLists {
+      width: 65%;
+    }
+
+    .fa {
+      font-size: 40px;
+      font-size: 2.5em;
+    }
   }
 }
 
+.featuresBanners{
+  .featuresBannerItem{
+    margin: 1em auto;
+  }
+}
 .bSubHeading {
   h2 {
     font-family: $ManifoldCF-Bold;
