@@ -114,14 +114,14 @@
 
 .bx-wrapper .bx-prev {
   left: 2%;
-  background: url(../images/arrow-left.svg) no-repeat;
+  background: url(../images/next-arrow-white.svg) no-repeat;
+  transform: rotate(180deg);
   opacity: 0.9;
 }
 
 .bx-wrapper .bx-next {
   right: 2%;
-  background: url(../images/arrow-left.svg) no-repeat;
-  transform: rotate(180deg);
+  background: url(../images/next-arrow-white.svg) no-repeat;
   opacity: 0.9;
 }
 
@@ -139,9 +139,10 @@
   margin-top: -20px;
   margin-top: -1.25em;
   outline: 0;
-  width: 40px;
-  width: 20em;
-  height: auto;
+  width: 70px;
+  height: 70px;
+  background-size: 70px 70px;
+  background-position: center;
   text-indent: -9999px;
   z-index: 99;
 }

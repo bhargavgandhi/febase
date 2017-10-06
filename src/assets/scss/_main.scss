@@ -21,27 +21,51 @@
   font-family: $fontStack;
   font-size: 14px;
   font-size: 0.875em;
-  line-height: 1.29;
-  letter-spacing: 0.1px;
+  line-height: 1.2;
   text-align: center;
   color: #000000;
-  padding: 1.4em;
+  padding: 1em;
   background: transparent;
-  border: 1px solid #c09260;
+  border: 1px solid #000;
   background: transparent;
-  margin-right: 3em;
   float: none !important;
   outline: none;
   max-width: 220px;
-  max-width: 16em;
-  margin: 10px auto 0;
+  max-width: 12em;
+  margin: 10px 0 0;
   -webkit-font-smoothing: antialiased;
   border-radius: 0 !important;
 }
 
-.homeSlides{
+.homeSlides {
   vertical-align: top;
 }
+
+#breadcrumbs {
+  ul {
+    list-style: none;
+
+    li {
+      display: inline-block;
+      font-size: 12px;
+      color: #888;
+      font-weight: 600;
+
+      &:after {
+        content: " / ";
+      }
+
+      &.active {
+        color: #FCE257;
+
+        &:after {
+          content: "";
+        }
+      }
+    }
+  }
+}
+
 .bx-controls,
 .bx-wrapper .bx-viewport {
   font-size: 16px;
@@ -60,10 +84,11 @@
   color: #333333;
 }
 
-h1{
+h1 {
   margin: 1em auto 10px;
 }
-h4{
+
+h4 {
   margin: 10px auto 2em;
 }
 
@@ -76,7 +101,6 @@ h2 {
   text-align: left;
   color: #333333;
   line-height: 1.4;
-
 }
 
 p {
@@ -92,6 +116,7 @@ p {
 
 .features {
   vertical-align: top;
+
   .featureItem {
     margin: 1.5em auto;
 
@@ -118,11 +143,36 @@ p {
   }
 }
 
-.featuresBanners{
-  .featuresBannerItem{
+.featuresBanners {
+  .featuresBannerItem {
     margin: 1em auto;
+
+    figcaption {
+      position: absolute;
+      bottom: 0;
+      color: #fff;
+      background: rgba(210, 62, 92, 0.75);
+      width: 100%;
+      display: block;
+      padding: 2em;
+
+      h2 {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1.5em;
+      }
+
+      h2.big {
+        font-size: 3em;
+      }
+    }
+
+    figcaption.black {
+      background: rgba(0,0,0, 0.75);
+    }
   }
 }
+
 .bSubHeading {
   h2 {
     font-family: $ManifoldCF-Bold;
@@ -501,15 +551,15 @@ footer {
     width: 100%;
     margin: 0 auto;
 
-    .ftAddress,
-    .ftLinks {
+    .ftLinks,
+    .ftLogo {
       display: inline-block;
       text-align: left;
       margin: 0 -5px 0 0;
       vertical-align: middle;
     }
 
-    .ftAddress {
+    .ftLogo {
       text-align: left;
 
       p {
@@ -523,16 +573,10 @@ footer {
         color: #fff;
       }
 
-      ul {
-        list-style: none;
-        padding: 0;
-
-        li {
-          font-size: 10px;
-          font-size: 0.625em;
-          line-height: 1.4;
-          font-family: $fontStack;
-        }
+      img,
+      p {
+        display: inline-block;
+        vertical-align: middle;
       }
     }
 
@@ -562,10 +606,21 @@ footer {
           }
 
           i {
-            color: #7f7f7f;
+            color: #fcdf5d;
+            font-size: 1.5em;
           }
         }
       }
+    }
+
+    .copyrights {
+      color: #fff;
+      font-size: 10px;
+      position: absolute;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      text-align: center;
     }
   }
 }
