@@ -32,12 +32,20 @@ $(function() {
     $("#nav-icon3").toggleClass("open");
   });
 
-  $('.homeSlides').bxSlider({
-    adaptiveHeight: true,
-    mode: 'fade',
-    captions: true,
-    pager: true,
-    pagerType: 'long',
-  });
+  if ($('body').hasClass('home')) {
+    $('.homeSlides').bxSlider({adaptiveHeight: true, mode: 'fade', captions: true, pager: true, pagerType: 'long'});
+  }
+
+  if ($('body').hasClass('about')) {
+    var maxHeight = 0;
+
+    $(".aboutContainer > div").each(function() {
+      if ($(this).height() > maxHeight) {
+        maxHeight = $(this).height();
+      }
+    });
+
+    $(".aboutContainer > div").height(maxHeight);
+  }
 
 });

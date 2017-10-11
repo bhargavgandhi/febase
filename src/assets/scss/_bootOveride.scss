@@ -226,18 +226,83 @@ a.navbar-brand {
 .navbar-default.affix .nav > li > a,
 .navbar-default.affix .nav > li > a:focus {
   /* color: #0000ff;*/
-  text-decoration: underline;
+  text-decoration: none;
+}
+
+#mainNav .nav > li > a {
+  text-decoration: none;
+
+  &:after{
+    content:"";
+    border-bottom: 1px solid #333;
+    width: 0;
+    max-width:0;
+    position: absolute;
+    bottom:-5px;
+    margin:0 auto;
+    left:0;
+    right:0;
+    opacity:1;
+    transition: all 0.2s linear;
+  }
+
+  &:hover{
+    text-decoration:none;
+    &:after{
+      opacity: 1;
+      width: fit-content;
+      width: -webkit-fill-available;
+      width: -webkit-stretch;
+      max-width: 10em;
+    }
+  }
 }
 
 #mainNav.navbar-default .nav > li.active > a,
 #mainNav.navbar-default .nav > li.active > a:focus {
   /*color: #0000ff;*/
-  text-decoration: underline;
+  text-decoration: none;
+  &:after{
+    content:"";
+    border-bottom: 1px solid #333;
+    width: auto;
+    width: fit-content;
+    width: -webkit-fill-available;
+    width: -webkit-stretch;
+    max-width: 10em;
+    position: absolute;
+    bottom:-5px;
+    margin:0 auto;
+    left:0;
+    right:0;
+
+  }
 }
 
-#mainNav .nav > li > a:hover {
-  text-decoration: underline;
+
+
+
+#mainNav.navbar-default .nav > li.brand > a,
+#mainNav.navbar-default .nav > li.brand > a:focus,
+#mainNav.navbar-default .nav > li.brand > a:hover {
+  /*color: #0000ff;*/
+  text-decoration: none;
+  &:after{
+    content:"";
+    border-bottom: 0px solid #333;
+    width: auto;
+    width: fit-content;
+    width: -webkit-fill-available;
+    width: -webkit-stretch;
+    position: absolute;
+    bottom:0;
+    margin:0 auto;
+    left:0;
+    right:0;
+
+  }
 }
+
 
 #mainNav {
   border: 0 none;
@@ -269,7 +334,10 @@ a.navbar-brand {
 // }
 
 .navbar-nav > li > a {
-  padding: 20px 15px 0;
+  padding: 20px 0px 0;
+}
+.navbar-nav > li {
+  padding: 0px 15px;
 }
 
 #mainNav .navbar-brand > img.logo2 {

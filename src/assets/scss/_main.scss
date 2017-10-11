@@ -86,6 +86,8 @@
 
 h1 {
   margin: 1em auto 10px;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 h4 {
@@ -139,6 +141,7 @@ p {
     .fa {
       font-size: 40px;
       font-size: 2.5em;
+      color: #FCE257;
     }
   }
 }
@@ -146,6 +149,12 @@ p {
 .featuresBanners {
   .featuresBannerItem {
     margin: 1em auto;
+    overflow: hidden;
+
+    &:hover figcaption {
+      opacity: 1;
+      bottom: 0;
+    }
 
     figcaption {
       position: absolute;
@@ -155,6 +164,9 @@ p {
       width: 100%;
       display: block;
       padding: 2em;
+      opacity: 0;
+      bottom: -50%;
+      transition: all 0.3s linear;
 
       h2 {
         color: #fff;
@@ -237,6 +249,79 @@ p {
 #homeHero {
   .bRight {}
 }
+
+body.about {
+  .aboutContainer {
+    display: block;
+    width:100%;
+
+    .mapContainer, .featuresBanners{
+      display: inline-block;
+      height: 100%;
+      padding: 0;
+      margin: 3em auto;
+      vertical-align: top;
+    }
+
+    .mapBlock, .featuresBannerItem {
+      margin: 0em auto;
+      height: 100%;
+    }
+    .mapBlock{
+      height: 100%;
+      margin-bottom:0;
+    }
+
+    #map {
+      min-height: 410px;
+      height: 100%;
+      width: 100%;
+      z-index: 98;
+    }
+
+
+    .contactBtn {
+      border-color: #fff;
+    }
+  }
+
+
+
+}
+
+.bInfoBox {
+  cursor: default;
+  background: #fcdf5d;
+  width: 115px;
+  height: auto;
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.1;
+  // transform: translateZ(0px);
+  box-shadow: 0 2px 6px #888;
+  visibility: visible;
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+
+  &:after {
+    display: block;
+    content: '';
+    bottom: -20px;
+    width: 15px;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    margin-left: -7.5px;
+    border: 7.5px solid #fcdf5d;
+    border-width: 10px 7.5px;
+    border-color: #fcdf5d transparent transparent;
+  }
+}
+
+
 
 #homeRow3 {
   background: rgba(150,150,150,0.8);
@@ -571,6 +656,12 @@ footer {
         line-height: normal;
         letter-spacing: 0.3px;
         color: #fff;
+        margin: 0 0 0 10px;
+        a{
+          display: block;
+          text-transform: uppercase;
+          margin: 5px 0 0 0;
+        }
       }
 
       img,
