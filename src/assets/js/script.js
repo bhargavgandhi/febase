@@ -6,7 +6,7 @@
 $(function() {
   var itsIE = detectIE();
   var windowWidth = setWidth();
-  
+
   if (itsIE === false) {
     $(window).load(function() {
       $("#preloader").fadeOut("slow", function() {
