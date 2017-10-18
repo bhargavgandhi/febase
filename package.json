@@ -20,8 +20,7 @@
       ],
       "camelcase": 1,
       "no-empty": 2,
-      "no-obj-calls": 2,
-      "no-unused-vars": 1
+      "no-obj-calls": 2
     }
   },
   "devDependencies": {

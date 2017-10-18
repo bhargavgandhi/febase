@@ -4,8 +4,9 @@
    =========================== */
 
 $(function() {
-  checkBrowsers();
   var itsIE = detectIE();
+  var windowWidth = setWidth();
+  
   if (itsIE === false) {
     $(window).load(function() {
       $("#preloader").fadeOut("slow", function() {
@@ -37,15 +38,17 @@ $(function() {
   }
 
   if ($('body').hasClass('about')) {
-    var maxHeight = 0;
+    if(windowWidth > 1000){
+      var maxHeight = 0;
 
-    $(".aboutContainer > div").each(function() {
-      if ($(this).height() > maxHeight) {
-        maxHeight = $(this).height();
-      }
-    });
+      $(".aboutContainer > div").each(function() {
+        if ($(this).height() > maxHeight) {
+          maxHeight = $(this).height();
+        }
+      });
 
-    $(".aboutContainer > div").height(maxHeight);
+      $(".aboutContainer > div").height(maxHeight);
+    }
   }
 
 });

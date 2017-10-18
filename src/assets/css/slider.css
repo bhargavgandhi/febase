@@ -213,3 +213,12 @@
   font-size: .85em;
   padding: 10px;
 }
+
+@media screen and (min-width: 300px) and (max-width: 999px) {
+  .bx-wrapper .bx-controls-direction a {
+    top: 55%;
+    width: 30px;
+    height: 30px;
+    background-size: 30px 30px;
+  }
+}

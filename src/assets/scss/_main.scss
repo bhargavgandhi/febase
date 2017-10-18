@@ -3,8 +3,6 @@
      Description: main.scss
      ===========================
 */
-
-
 .btn {
   clear: both;
   display: block;
@@ -77,18 +75,21 @@
 h1 {
   margin: 1em auto 10px;
   text-transform: uppercase;
-  font-weight: 500;
-  sub{
+  font-weight: 600;
+  font-size: 36px;
+  font-size: 2.25em;
+
+  sub {
     text-transform: lowercase;
   }
-  strong{
 
-  }
 }
 
 h4 {
   margin: 10px auto 2em;
   color: #f00;
+  font-size: 18px;
+  font-size: 1.125em;
 }
 
 h2 {
@@ -155,7 +156,6 @@ p {
 
     figcaption {
       position: absolute;
-      bottom: 0;
       color: #fff;
       background: rgba(210, 62, 92, 0.75);
       width: 100%;
@@ -182,77 +182,13 @@ p {
   }
 }
 
-.bSubHeading {
-  h2 {
-    font-family: $ManifoldCF-Bold;
-    font-size: 32px;
-    font-size: 1.8em;
-    font-weight: bold;
-    letter-spacing: 2.6px;
-    text-align: center;
-    color: #333333;
-    line-height: 1.4;
-  }
-
-  span.slash {
-    font-family: inherit;
-    display: block;
-    line-height: 1.2;
-    -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
-  }
-}
-
-.bSubHeading2 {
-  vertical-align: top;
-
-  h3 {
-    font-family: $fontStack;
-    font-size: 15px;
-    font-size: 0.9em;
-    font-weight: 500;
-    line-height: 1.47;
-    letter-spacing: 0.3px;
-    color: #333333;
-    position: relative;
-
-    &:after {
-      content: "";
-      border-top: 1px solid #333;
-      position: absolute;
-      display: block;
-      left: 0;
-      bottom: 0;
-      width: 9.85em;
-    }
-  }
-}
-
-.bSubPara2 {
-  vertical-align: top;
-
-  p {
-    font-family: $fontStack;
-    font-size: 15px;
-    font-size: 0.94em;
-    font-weight: 500;
-    line-height: 1.47;
-    letter-spacing: 0.3px;
-    color: #333333;
-    margin: 0;
-  }
-}
-
-#homeHero {
-  .bRight {}
-}
-
 body.about {
   .aboutContainer {
     display: block;
-    width:100%;
+    width: 100%;
 
-    .mapContainer, .featuresBanners{
+    .featuresBanners,
+    .mapContainer {
       display: inline-block;
       height: 100%;
       padding: 0;
@@ -260,13 +196,15 @@ body.about {
       vertical-align: top;
     }
 
-    .mapBlock, .featuresBannerItem {
-      margin: 0em auto;
+    .featuresBannerItem,
+    .mapBlock {
+      margin: 0 auto;
       height: 100%;
     }
-    .mapBlock{
+
+    .mapBlock {
       height: 100%;
-      margin-bottom:0;
+      margin-bottom: 0;
     }
 
     #map {
@@ -276,14 +214,10 @@ body.about {
       z-index: 98;
     }
 
-
     .contactBtn {
       border-color: #fff;
     }
   }
-
-
-
 }
 
 .bInfoBox {
@@ -315,305 +249,6 @@ body.about {
     border: 7.5px solid #fcdf5d;
     border-width: 10px 7.5px;
     border-color: #fcdf5d transparent transparent;
-  }
-}
-
-
-
-#homeRow3 {
-  background: rgba(150,150,150,0.8);
-  position: fixed;
-
-  .bSubHeading {
-    margin: 5% auto;
-
-    h2 {
-      text-align: center;
-    }
-  }
-
-  .bLeft,
-  .bRight,
-  .bText {
-    display: inline-block;
-    vertical-align: top;
-  }
-
-  .bRight {
-    width: 80%;
-    margin: 0 auto;
-  }
-
-  .bText {
-    width: 156px;
-    width: 13.8%;
-    // width: 9.8em;
-    h3 {
-      font-family: $fontStack;
-      font-size: 15px;
-      font-size: 0.94em;
-      font-weight: 500;
-      line-height: 1.47;
-      color: #333333;
-      max-width: 9.35em;
-    }
-
-    hr {
-      border-color: #000;
-      margin: 5px 0 10px;
-    }
-
-    ul {
-      list-style-type: none;
-
-      li {
-        font-family: $fontStack;
-        font-size: 15px;
-        font-size: 0.94em;
-        font-weight: 500;
-        line-height: 1.47;
-        letter-spacing: 0.3px;
-        color: #333333;
-
-        &:before {
-          content: "- ";
-        }
-      }
-    }
-  }
-}
-
-#homeRow4 {
-  .bSubHeading {
-    margin: 5em 5em 5em -5em;
-
-    h2 {
-      max-width: 10.5em;
-    }
-  }
-
-  .bLeft,
-  .bRight,
-  .bText {
-    display: inline-block;
-    vertical-align: top;
-  }
-
-  .bLeft {
-    width: 40%;
-    margin-right: 5%;
-    margin-top: -5%;
-  }
-
-  .bRight {
-    width: 50%;
-  }
-
-  .bx-wrapper .bx-viewport {
-    left: 0;
-  }
-
-  .bx-wrapper .bx-controls-direction a {
-    bottom: 18px;
-    bottom: 1.1em;
-  }
-
-  .bx-wrapper .bx-prev {
-    right: 8%;
-  }
-
-  .bx-wrapper .bx-next {
-    bottom: 18px !important;
-    bottom: 1.1em !important;
-  }
-
-  .bx-wrapper .bx-controls-auto,
-  .bx-wrapper .bx-pager {
-    max-width: 102px;
-    bottom: 2px;
-    bottom: 0.2em;
-  }
-
-  .bx-wrapper .bx-caption span {
-    padding: 10px 40px;
-  }
-}
-
-#homeRow5 {
-  .dummyItems {
-    margin-top: 5%;
-    margin-right: 5%;
-  }
-
-  h2.bSubHead {
-    font-family: $fontStack;
-    font-size: 15px;
-    font-size: 0.94em;
-    font-weight: 500;
-    line-height: 1.47;
-    letter-spacing: 0.3px;
-    color: #333333;
-    position: relative;
-  }
-
-  .bInfoHeading {
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  h3 {
-    margin-top: 1em;
-    font-family: $fontStack;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 1.38;
-    letter-spacing: 0.5px;
-    color: #333333;
-    text-align: center;
-  }
-}
-
-#homeMap {
-  .mainMap,
-  .mapLists {
-    vertical-align: top;
-  }
-
-  .mainMap {
-    float: right !important;
-  }
-
-  .mapLists {
-    h2,
-    h3,
-    ol li {
-      font-family: $fontStack;
-      font-size: 12px;
-      font-size: 0.75em;
-      font-weight: 500;
-      line-height: 1.42;
-      color: #333333;
-    }
-
-    h2,
-    h3 {
-      border-bottom: 1px solid #000;
-    }
-
-    h3 {
-      margin: 20px auto;
-      position: relative;
-
-      &:after {
-        content: "+";
-        position: absolute;
-        right: 0;
-        top: -10px;
-        font-size: 25px;
-      }
-    }
-
-    ol {
-      li {
-        line-height: 1.92;
-      }
-    }
-  }
-}
-
-#homeRow6 {
-  .bSubHeading2 {
-    margin: 0 auto 5%;
-
-    h3 {
-      font-family: $fontStack;
-      font-size: 15px;
-      font-size: 0.94em;
-      font-weight: 500;
-      line-height: 1.47;
-      letter-spacing: 0.3px;
-      color: #333333;
-    }
-
-    p {
-      margin-top: 2.5em;
-      font-family: $fontStack;
-      font-size: 15px;
-      font-size: 0.94em;
-      font-weight: 500;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: 1.47;
-      letter-spacing: 0.3px;
-      color: #333333;
-    }
-  }
-
-  .bLeft,
-  .bRight,
-  .bText {
-    display: inline-block;
-    vertical-align: top;
-  }
-
-  .bLeft {
-    width: 40%;
-    margin-right: 5%;
-  }
-
-  .bRight {
-    width: 50%;
-  }
-}
-
-#homeRow7 {
-  background: rgba(200,200,200,0.8);
-
-  .bSubHeading2 {
-    h3 {}
-  }
-
-  .bSubHeading {
-    margin-right: -4px;
-
-    h2 {
-      text-align: left;
-      line-height: 1.09;
-      letter-spacing: 2.2px;
-    }
-
-    h3 {
-      text-align: left;
-      line-height: 1.09;
-      letter-spacing: 2.2px;
-      font-size: 1em;
-    }
-
-    h4 {
-      max-width: 11em;
-      font-family: $fontStack;
-      font-size: 24px;
-      font-size: 1.2em;
-      font-weight: 500;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: 1.38;
-      letter-spacing: 0.5px;
-      color: #333333;
-    }
-
-    hr {
-      border-color: #000;
-      max-width: 15em;
-    }
-  }
-}
-
-#footNavNext {
-  text-align: right;
-
-  img {
-    display: inline-block;
   }
 }
 
@@ -654,10 +289,11 @@ footer {
         letter-spacing: 0.3px;
         color: #fff;
         margin: 0 0 0 10px;
-        a{
+
+        a {
           display: block;
           text-transform: uppercase;
-          margin: 5px 0 0 0;
+          margin: 5px 0 0;
         }
       }
 

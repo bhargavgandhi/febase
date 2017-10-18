@@ -70,7 +70,7 @@ function addMarker(i, marker) {
   var mapMarkerImage = new google.maps.MarkerImage('assets/images/map-marker-icon.png', null, null, new google.maps.Point(8, 40), new google.maps.Size(25, 25));
   mapMarkerImage.url += "#" + label;
 
-  var infoClass = category + "Box box" + label;
+  var infoClass = "Box box" + label;
   var infoClass2 = "box" + label;
 
   ib = new InfoBox({
@@ -98,7 +98,6 @@ function addMarker(i, marker) {
   marker1 = new google.maps.Marker({
     title: title,
     position: pos,
-    category: category,
     map: map,
     copy: content,
     icon: mapMarkerImage,
